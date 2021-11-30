@@ -56,7 +56,7 @@ export const useMedia = (fw: any, d: any, t: any, m: any) => {
 }
 ```
 
-used to apply media queries to styles used in inline styling or gsap animations.  
+used to apply 'media queries' to styles used in inline styling, gsap animations, or anything else that cannot access css media queries.  
 
 example: 
 ```
