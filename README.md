@@ -33,6 +33,8 @@ export const useEllipseGlow = (wrapper: any, canvas: any, posX: number, posY: nu
 }
 ```
 
+needs a description
+
 ### useMedia
 
 ```
@@ -51,6 +53,8 @@ export const useMedia = (fw: any, d: any, t: any, m: any) => {
   }
 }
 ```
+
+needs a description
 
 ### usePrevious
 
