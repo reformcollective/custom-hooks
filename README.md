@@ -35,6 +35,7 @@ export const useEllipseGlow = (wrapper: any, canvas: any, posX: number, posY: nu
 
 needs a description
 
+---
 
 ### useMedia
 
@@ -55,8 +56,19 @@ export const useMedia = (fw: any, d: any, t: any, m: any) => {
 }
 ```
 
-needs a description
+used to apply media queries to styles used in inline styling or gsap animations.  
 
+example: 
+```
+let buttonWidth = useMedia('120px', '20vw', '10vw', '5vw')
+
+gsap.to('#button', {
+  duration: 1,
+  width: buttonWidth
+})
+```
+
+---
 
 ### usePrevious
 
@@ -76,6 +88,7 @@ export const usePrevious = (value: any) => {
 
 used to capture the previous value of a variable.  Handy for comparison with the new value within a useEffect.
 
+---
 
 ### useRoundRectGlow
 
@@ -122,3 +135,5 @@ export const useRoundRectGlow = (wrapper: any, canvas: any, offsetX: number, off
 ```
 
 needs a description
+
+---
