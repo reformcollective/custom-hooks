@@ -88,6 +88,23 @@ export const usePrevious = (value: any) => {
 
 used to capture the previous value of a variable.  Handy for comparison with the new value within a useEffect.
 
+example:
+```
+let [value, setValue] = useState('red')
+let previousValue = usePrevious(value)
+
+useEffect(() => {
+  setValue('blue')
+}, [])
+
+useEffect(() => {
+  if (value !== previousValue) {
+    console.log(value) // blue
+    console.log(previousValue) // red
+  }
+}, [value])
+```
+
 ---
 
 ### useRoundRectGlow
