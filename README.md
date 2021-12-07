@@ -33,7 +33,13 @@ export const useEllipseGlow = (wrapper: any, canvas: any, posX: number, posY: nu
 }
 ```
 
-needs a description
+Will draw an ellipse onto a canvas.
+things to note:
+- the "canvas" and "wrapper" parameters need to be refs. can be the same ref, depending on how you're calculating size (size is % of wrapper width)
+posX, posY, radX, and radY should all be decimals from 0 to 1 representing percentage (e.g. 0.5 for 50% of wrapper width)
+- rotation goes from 0 to 2 PI (Math.PI === 180 degrees)
+- color should be hex code
+- for blurred glows, blur the canvas using `filter: blur(vw)`
 
 ---
 
@@ -150,7 +156,10 @@ export const useRoundRectGlow = (wrapper: any, canvas: any, offsetX: number, off
   })
 }
 ```
+similar to useEllipseGlow, but for rounded rectangles
 
-needs a description
+things to note
+- wrapper and canvas params need to be refs (see useEllipseGlow description)
+- offset parameter was custom for TT site, may need to revisit this
 
 ---
